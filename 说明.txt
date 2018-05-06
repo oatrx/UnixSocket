@@ -1,0 +1,12 @@
+Linux 下的 socket网络编程 对./Unix/unpv13e进行整理。可以编译调试学习，主要整理后的源文件都在./socket目录下。添加项目后，编译出错可能是需要重新配置Includes 和 Source Location,把socket中的源文件连接进对应的工程中。一般linux没有安装sctp开发库，可能需要安装sctp安装库。
+
+// 添加include目录
+Project -> Properties -> C/C++General -> Paths and Symbols -> Includes tab -> GCC C
+Project -> Properties -> C/C++General -> Paths and Symbols -> Includes tab -> GCC C++
+Project -> Properties -> C/C++build -> Settings: Tool settings tab -> GCC C++ Compiler -> includes
+Project -> Properties -> C/C++build -> Settings: Tool settings tab -> GCC C Compiler -> includes
+// 对所有编译器情况加入include目录
+Project -> properties -> C/C++General -> Paths and Symbols -> Includes tab -> Assembly
+
+// 添加额外的源文件目录,下面是连接的方式添加
+Project -> properties -> C/C++General -> Paths and Symbols -> Source Location tab -> Link Folder -> Link to folder in the file system
